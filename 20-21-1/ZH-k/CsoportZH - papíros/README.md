@@ -29,7 +29,7 @@ Készíts specifikációt a programhoz, ami megoldja a feladatot! (Be, Ki, Ef, U
 Széchenyihegy a vasút egyik végállomása. Forgalmasabb nyári napokon a két 10-14 éves pénztáros kezeit összesen akár több millió forint is megjárhatja. Lacika szeretné kideríteni, hogy hány olyan nap volt, amikor az egy pénztárosra jutó tiszta bevétel elérte az 500.000 Forintot
 
 ### Például
-|Össz bevétel|Pénztárosok száma|
+|Pénztárosok száma|Össz bevétel|
 |-|-|
 |2|780.000|
 |2|1.105.000|
@@ -39,7 +39,7 @@ Széchenyihegy a vasút egyik végállomása. Forgalmasabb nyári napokon a két
 |2|1.200.000|
 **→ 4**
 
-|Össz bevétel|Pénztárosok száma|
+|Pénztárosok száma|Össz bevétel|
 |-|-|
 |2|780.000|
 |2|890.000|
