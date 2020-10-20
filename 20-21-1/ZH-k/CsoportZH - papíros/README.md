@@ -84,7 +84,7 @@ A naplózó azért felel, hogy egy adott állomásra beérkező vonatokat fogadj
 **→ 356, 0:25**
 
 ### Feladat (6/10 pont)
-Készíts specifikációt (Be, Ki, Ef, Uf) **és struktogramot** a programhoz, ami megoldja a feladatot! Figyelj arra, hogy a vonatszámok egyediek!  
+Készíts specifikációt (Be, Ki, Ef, Uf) **és struktogramot** a programhoz, ami megoldja a feladatot! Figyelj arra, hogy a vonatszámok legyenek egyediek!  
 Használhatsz három tömböt, vagy struktúrát is.  
 
 
