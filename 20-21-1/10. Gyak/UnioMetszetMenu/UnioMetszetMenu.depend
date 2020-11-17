@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1605605021 source:d:\programozas\oktatott tárgyak\progralap\programozas\20-21-1\10. gyak\uniometszetmenu\main.cpp
+	<iostream>
+	<vector>
+
