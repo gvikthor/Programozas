@@ -38,7 +38,7 @@ Tehát max 10 pont szedhető össze, de ha nem oldod meg legalább az egyik köt
 
 
 ### Bemenet és kimenet
-Én itt egy tömbméret bekérése után `név  életkor` sorrendben adom meg a kutyákat (nem tudok kutyaneveket, nézzétek el nekem) . A kimenetnek nem muszáj ilyen formátumúnak lenni, lehet akár csak annyi, hogy 3.6 volt Istvan.  
+Én itt egy tömbméret bekérése után `név  életkor` sorrendben adom meg a kutyákat (nem tudok kutyaneveket, nézzétek el nekem) . A kimenetnek nem muszáj ilyen formátumúnak lenni, lehet akár csak annyi, hogy `3.6 volt István`.  
 #### Sima bemenet, nincs öreg kutya
 ````
 Be:
