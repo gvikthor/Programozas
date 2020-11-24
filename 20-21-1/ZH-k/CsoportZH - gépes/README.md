@@ -20,8 +20,8 @@ Van egy halom kutyusunk, mindegyiknek ismerjük a nevét és az életkorát (hó
 ### Pontozás
 
 Kötelező legalább az egyik (nincs nélküle elégséges, hiába van meg a többi):
-- A kimenetre helyesen kiírod, hogy mi a kutyák átlagéletkora tört években! (1.5 pont)
-- A kimenetre helyesen kiírod, hogy van-e olyan kutya, aki 10 évnél idősebb, és ha van, a nevét is (2.5 pont)
+- A kimenetre helyesen kiírod, hogy mi a kutyák átlagéletkora tört években! (2 pont)
+- A kimenetre helyesen kiírod, hogy van-e olyan kutya, aki 10 évnél idősebb, és ha van, a nevét is (3 pont)
 
 További pontok:
 - Nem egy beégetett vektorban vannak az adatok, hanem a konzolról olvasod be őket. Érdemes ilyenkor az adatok számát beolvasni először! (1 pont)
