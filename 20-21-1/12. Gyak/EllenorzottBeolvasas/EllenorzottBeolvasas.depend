@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1607418094 source:d:\programozas\oktatott tárgyak\progralap\programozas\20-21-1\12. gyak\ellenorzottbeolvasas\main.cpp
+	<iostream>
+	<vector>
+	<math.h>
+

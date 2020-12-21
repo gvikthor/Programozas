@@ -26,6 +26,12 @@ bool pozitivE(int a){
     return a > 0;
 }
 
+void konzolHibakezeles(){
+    cin.clear();
+    string kuka;
+    getline(cin, kuka);
+}
+
 int main()
 {
     int N;
@@ -37,9 +43,11 @@ int main()
 
         double beolvasott;
         cin >> beolvasott;
-        if(egeszE(beolvasott)){ //Típus
+        if(!cin.fail() && egeszE(beolvasott)){ //Típus
             N = beolvasott;
             joErtek = pozitivE(N); //Érték
+        }else{
+            konzolHibakezeles();
         }
     }while(!joErtek);
 
@@ -51,9 +59,11 @@ int main()
 
             double beolvasott;
             cin >> beolvasott;
-            if(egeszE(beolvasott)){ //Típus
+            if(!cin.fail() && egeszE(beolvasott)){ //Típus
                 adatok[i] = beolvasott;
                 joErtek = parosPozitivSzaz(adatok[i]); //Érték
+            }else{
+                konzolHibakezeles();
             }
         }while(!joErtek);
     }
