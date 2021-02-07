@@ -1,7 +1,7 @@
 # Programozási Alapismeretek
 
 E-mail: mohmas@inf.elte.hu  
-Honlap: https://people.inf.elte.hu/mohmas/#!/progmat
+Honlap: https://people.inf.elte.hu/mohmas/#!/progmat  
 Tárgyi honlap: http://progalap.elte.hu
 
 ## 1. csoport
