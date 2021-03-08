@@ -11,15 +11,19 @@ int main()
     bool volt = false;
 
     for(int i = 1; i < szamok.size(); i++){
-        if(
-           (szamok[i] % 2 == 0) &&
-           (!volt || szamok[i] > maxErtek)
-        ){
+        if((szamok[i] % 2 == 0) && (!volt || szamok[i] > maxErtek)){
             maxErtek = szamok[i];
             maxHely = i;
             volt = true;
         }
     }
+
+    /*
+    ciklus végig a számokon
+        ha teljesül a feltétel és ez lehet maximum
+            csere
+
+    */
 
     //cout << "A maximum a(z) " << maxHely << ". helyen van, ereteke " << maxErtek << endl;
     if(volt){
