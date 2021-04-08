@@ -34,7 +34,7 @@ Az idő típuson/rekordon értelmezett a matematikai
 Az idő típuson/rekordon nem értelmezett (részben)rendezés (<, <=, >, >=), de természetes számokon továbbra is igen!
 
 
-Az Étkezés típus/rekord nem adott, neked kell specifikálni, ha használni szeretnéd. Ekkor nem kell kikötni, hogy létezik értékadás operátor (:=), de ez esetben ezen kívül semmi más operátort ne használj!
+Az Étkezés típus/rekord nem adott, neked kell specifikálni, ha használni szeretnéd. Ekkor nem kell kikötni, hogy létezik értékadás operátor (:=), de ez esetben ezen kívül semmi más operátort ne használj az Étkezés típuson (de természetes számokon, stringeken, időn stb továbbra is értelmezettek a megszokott és megadott operátorok)!
 
 Tudjuk, hogy Ruti nem evett kétszer ugyanolyan ételt (tehát nincs két olyan étkezés, amiben az étel neve megegyezne), de **ezt neked kell kikötni a specifikációban!**
 
