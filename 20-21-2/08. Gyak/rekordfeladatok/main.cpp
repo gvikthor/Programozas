@@ -70,7 +70,7 @@ int main()
 
     //Adjuk meg a legidõsebb embert azok közül, akik szereztek diplomát 2020-ban, vagy az után!
 
-    cout << emberek[0].eletkorharomszorosa();
+
 
     return 0;
 }
