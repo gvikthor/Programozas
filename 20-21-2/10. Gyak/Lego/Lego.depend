@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1619083525 source:q:\programozas\oktatott tárgyak\progralap\programozas\20-21-2\10. gyak\lego\main.cpp
+	<iostream>
+	<vector>
+
