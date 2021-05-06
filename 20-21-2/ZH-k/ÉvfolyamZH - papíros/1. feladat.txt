@@ -1,0 +1,34 @@
+Feljegyeztük az utóbbi N nap karanténban levők számát.
+Hány olyan szakasz volt, amelyben a karanténba levők száma folyamatosan csökkent?
+
+A:
+
+Konstans
+  MaxN:Egész(100)
+Típus
+  TDarabok=Tömb[1..MaxN+1:Egész]
+Változó
+  N:Egész
+  Karanténban:TDarabok
+  Db:Egész
+
+B:
+
+[lokális változók:]
+Változó
+  i:Egész
+
+Db:=0; Karanténban[N+1]:=Karanténban[N]+1
+logikai = halmis
+Ciklus i=2-től N-ig
+  Ha Karanténban[i-1]>Karanténban[i] és
+     Karanténban[i]<=Karanténban[i+1]
+  akkor DB:=Db+1
+Ciklus vége
+
+C:
+
+Megszámolás
+
+
+

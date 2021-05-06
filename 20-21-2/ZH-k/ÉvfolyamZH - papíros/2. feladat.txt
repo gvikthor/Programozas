@@ -1,0 +1,63 @@
+Kertészeti munkákhoz szerződtetünk munkásokat. A munka N napon át tarthat, és K kertben kell végezni.
+Ismerjük, hogy az egyes kertekhez hány munkásra van szükség (Kert[1..K]). Minden kertben csak egyetlen napra szervezhető a munka. (Természetesen kertenként akár eltérő napon folyhat a munka.)
+Tudjuk továbbá, hogy az M munkavállaló az N nap melyik intervallumában (KezdőNap[1..M]..VégNap[1..M]) hajlandó dolgozni.
+A jelentkezőkkel mely kerteket tudjuk megművelni? (Ha több megoldás is lehetséges, akkor bármelyik megadható.)
+
+
+N nap
+K kert -> hány munkás kell? Kert[1..K]
+M munkavállaló -> mikor hajlandó dolgozni? KezdőNap[1..M] VégNap[1..M]
+
+
+A:
+
+Konstans
+  MaxN:Egész(100)
+  MaxK:Egész(100)
+  MaxM:Egész(100)
+Típus
+  TKell=Tömb[1..MaxK:Egész]
+  TRáér=Rekord(kezd,vég:Egész)
+  TRáérnek=Tömb[1..MaxM:TRáér]
+Változó
+  N,K,M:Egész
+  Kert:Tömb[1..MaxK:Egész]  [definiálható típus]
+  Munkások:TRáérnek
+
+B:
+
+[lokális változók:]
+Változó
+  NapDbk:Tömb[1..MaxN:Egész]  [definiálható típus]
+  i,j:Egész
+
+[az egyes napokon hányan érnek rá:]
+NapDbk[1..N]:=0  [másolás]
+Ciklus i=1-től M-ig  [másolás]
+  Ciklus j=Munkások[i].kezd-től 
+           Munkások[i].vég-ig  [másolás]
+    NapDbk[j]:=NapDbk[j]+1
+  Ciklus vége
+Ciklus vége
+[a megművelhető kertek megszámolása:]
+Db:=0 [megszámolás]
+Ciklus i=1-től K-ig
+  [egy legalább Kert[i] db munkással
+   rendelkező nap keresése:]
+  j:=1  [keresés]
+  volt := hamis
+  Ciklus amíg j<=N és !volt
+	volt := NapDbk[j]<Kert[i]
+    j:=j+1
+  Ciklus vége
+  Ha volt akkor 
+    Db:=Db+1 
+    NapokDbk[j]:=NapokDbk[j]-Kert[i]
+  Elágazás vége
+Ciklus vége
+
+Nem törekedtünk a legtöbb megművelhető kert fellelésére. De egy olyan megoldás, amely megelégszik csak egy megművelhető kert megtalálásával, az nem jó megoldás.
+
+C:
+
+Másolás tétel + Megszámolás tétel > Keresésé tétel

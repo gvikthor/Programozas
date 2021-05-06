@@ -1,0 +1,13 @@
+MintaZH
+
+4 kérdésből álló kvízt kell megoldania. Mindegyik kérdés egy programozási feladatot tartalmaz, amelyhez le kell írnia:
+
+    A. a bemeneti és a kimeneti adatok deklarációját, esetlegesen a típusdefiníciókkal együtt (5 pont),
+    B. az algoritmust – a tanult algoritmus-leíró nyelven (17 pont),
+    C. a megoldásában alkalmazott tételek nevét – hibás, ha a nem a kellőeket adja meg, akár ha többet, akár ha kevesebbet (3 pont).
+
+Megjegyzés: többféle megoldás is elképzelhető, ezért fontos, hogy a C. szinkronban legyen a B.-vel.
+
+Ügyeljen a határidőre, mert utólagos feltöltés nem lehetséges (még e-mailben sem)!
+
+Célszerű lenne, ha az A+B. részfeladatokat "Előformázott" stílussal szerkesztenék meg!
