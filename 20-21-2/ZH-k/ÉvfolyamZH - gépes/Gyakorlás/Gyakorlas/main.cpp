@@ -3,6 +3,7 @@
 
 using namespace std;
 
+/// 1. feladathoz
 int allatkert_ossz(vector<int> allatok){
     int szum = 0;
     for(int i = 1; i < allatok.size(); i++){
@@ -11,6 +12,7 @@ int allatkert_ossz(vector<int> allatok){
     return szum;
 }
 
+/// 2. feladathoz
 int allat_elofordulas(vector< vector<int> > allatkertek, int faj){
     int db = 0;
     for(int kert = 1; kert < allatkertek.size(); kert++){
@@ -19,6 +21,41 @@ int allat_elofordulas(vector< vector<int> > allatkertek, int faj){
         }
     }
     return db;
+}
+
+/// 3. feladathoz
+bool mindegyik_par(vector<int> allatok){
+    bool mind = true;
+    for(int allat = 1; allat < allatok.size() && mind; allat++){
+        mind = allatok[allat] == 0 || allatok[allat] > 1;
+    }
+    return mind;
+}
+
+/// 4. feladathoz
+bool nincs_ugyanolyan_allat(vector<int> allatok_1, vector<int> allatok_2){
+    bool mind_kulonbozik = true;
+    for(int allat = 1; allat < allatok_1.size() && mind_kulonbozik; allat++){
+        mind_kulonbozik = allatok_1[allat] == 0 || allatok_2[allat] == 0;
+    }
+    return mind_kulonbozik;
+}
+
+/// 5. feladathoz
+bool mindbol_legtobb(vector< vector<int> > allatkertek, int kert){
+    bool mind_legtobb = true;
+    for(int allat = 1; allat < allatkertek[kert].size() && mind_legtobb; allat++){
+        if(allatkertek[kert][allat] > 0){
+            bool legtobb = true;
+            for(int masik_kert = 1; masik_kert < allatkertek.size() && legtobb; masik_kert++){
+                if(masik_kert != kert){
+                    legtobb = allatkertek[kert][allat] > allatkertek[masik_kert][allat];
+                }
+            }
+            mind_legtobb = legtobb;
+        }
+    }
+    return mind_legtobb;
 }
 
 int main()
@@ -42,15 +79,13 @@ int main()
     \ 0 1 2 3 4 5 ---allatok
     0
     1   0 0 0 0 0
-    2   0 8 0 0 0
+    2   8 0 0 0 0
     3   0 0 0 0 0
     4   7 0 0 0 0
-    5   0 0 0 0 0
     |
     |
     |
-    a
-    k
+    allatkertek
     */
 
     vector< vector<int> > allatok; // allatok[5][7] megadja az 5-ös állatkertben élő 7-es fajú állatok darabszámát
@@ -127,6 +162,38 @@ int main()
         }
     }
 
+    ///3. feladat - kiválogatás és keresés
+    int mindbol_legalabb_par = 0;
+    for(int kert = 1; kert <= allatkertek_szama; kert++){
+        if(mindegyik_par(allatok[kert])){
+            mindbol_legalabb_par++;
+        }
+    }
+
+    ///4. feladat - keresés, csak szépen összefésüljük az állatkerteket
+    bool van_diszjunkt = false;
+    int f4_kert1, f4_kert2;
+    for(int kert_1 = 1; kert_1 <= allatkertek_szama && !van_diszjunkt; kert_1++){
+        for(int kert_2 = kert_1+1; kert_2 <= allatkertek_szama && !van_diszjunkt; kert_2++){
+            if(nincs_ugyanolyan_allat(allatok[kert_1], allatok[kert_2])){
+                van_diszjunkt = true;
+                f4_kert1 = kert_1;
+                f4_kert2 = kert_2;
+            }
+        }
+    }
+
+    ///5. feladat - keresésekre hasonlít, de nemtom, fáradt vagyok, sorry
+    //Ez most 3 for loop egymásban a függvény miatt.
+    //Lehetne egyszerűbben, ha nem számítana a sorrend, de a feladat növekvő sorrendben kérni, szóval ez így hatékonyabb, mint rendezgetni utólag.
+    vector<int> f5_allatkertek;
+    for(int kert = 1; kert <= allatkertek_szama; kert++){
+        if(mindbol_legtobb(allatok, kert)){
+            f5_allatkertek.push_back(kert);
+        }
+    }
+
+
     cout << "#" << endl; //1. feladat
     cout << max_index << endl;
 
@@ -138,14 +205,22 @@ int main()
     cout << endl;
 
     cout << "#" << endl; //3. feladat
-    cout << "0" << endl;
+    cout << mindbol_legalabb_par << endl;
 
     cout << "#" << endl; //4. feladat
-    cout << "0" << endl;
+    if(van_diszjunkt){
+        cout << f4_kert1 << " " << f4_kert2 << endl;
+    }else{
+        cout << -1 << endl;
+    }
 
     cout << "#" << endl; //5. feladat
-    cout << "0" << endl;
-    cout << "0" << endl;
+    cout << f5_allatkertek.size() << endl;
+    if(f5_allatkertek.size() > 0){
+        for(int kert: f5_allatkertek){
+            cout << kert << " ";
+        }
+    }
 
     return 0;
 }
